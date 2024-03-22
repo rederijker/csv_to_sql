@@ -37,7 +37,7 @@ def main():
         
         # Permette all'utente di scaricare il file SQL
         st.download_button(label="Scarica SQL",
-                           data=output_buffer,
+                           data=sql_commands.encode('utf-8'),
                            file_name=f"{table_name}.sql",
                            mime="application/sql")
 
